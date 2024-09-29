@@ -1,0 +1,10 @@
+17:20:04 **** Incremental Build of configuration Debug for project motor_controller ****
+make -j12 all 
+arm-none-eabi-size  motor_controller.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32884	   1268	   6628	  40780	   9f4c	motor_controller.elf
+Finished building: default.size.stdout
+ 
+
+17:20:04 Build Finished. 0 errors, 0 warnings. (took 542ms)
+

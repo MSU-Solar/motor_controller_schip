@@ -1,0 +1,33 @@
+!SESSION 2024-09-29 17:17:28.412 -----------------------------------------------
+eclipse.buildId=Version 1.16.1
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-09-29 17:17:34.688
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-29 17:17:34.696
+!MESSAGE Log4j2 initialized with config file C:\Users\vnaik\OneDrive - Michigan State University\Documents\Solar Car\Git projects\motor_controller_schip\motor_controller\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-29 17:17:36.952
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-29 17:17:47.147
+!MESSAGE Indexed 'motor_controller' (64 sources, 147 headers) in 4.19 sec: 13,550 declarations; 85,356 references; 8 unresolved inclusions; 1,462 syntax errors; 3,942 unresolved names (3.8%)
+!SESSION 2024-09-29 17:19:52.154 -----------------------------------------------
+eclipse.buildId=Version 1.16.1
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-09-29 17:19:57.460
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-29 17:19:57.460
+!MESSAGE Log4j2 initialized with config file C:\Users\vnaik\OneDrive - Michigan State University\Documents\Solar Car\Git projects\motor_controller_schip\motor_controller\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-29 17:20:02.250
+!MESSAGE Started RMI Server, listening on port 41337
