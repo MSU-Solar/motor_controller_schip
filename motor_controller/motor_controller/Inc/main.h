@@ -73,10 +73,6 @@ void Error_Handler(void);
 #define M1_CURR_AMPL_U_GPIO_Port GPIOA
 #define M1_BUS_VOLTAGE_Pin GPIO_PIN_1
 #define M1_BUS_VOLTAGE_GPIO_Port GPIOA
-#define UART_TX_Pin GPIO_PIN_2
-#define UART_TX_GPIO_Port GPIOA
-#define UART_RX_Pin GPIO_PIN_3
-#define UART_RX_GPIO_Port GPIOA
 #define M1_DP_Pin GPIO_PIN_6
 #define M1_DP_GPIO_Port GPIOA
 #define M1_PWM_UH_Pin GPIO_PIN_8

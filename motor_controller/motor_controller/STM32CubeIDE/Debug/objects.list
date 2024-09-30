@@ -1,5 +1,6 @@
 "./Application/Startup/startup_stm32f302r8tx.o"
 "./Application/User/aspep.o"
+"./Application/User/dassert.o"
 "./Application/User/main.o"
 "./Application/User/mc_api.o"
 "./Application/User/mc_app_hooks.o"

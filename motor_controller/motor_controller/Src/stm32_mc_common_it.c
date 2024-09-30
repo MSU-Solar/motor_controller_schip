@@ -32,6 +32,10 @@
 #include "mcp_config.h"
 
 /* USER CODE BEGIN Includes */
+#define OVERRIDE_USART_ASPEP
+#ifdef OVERRIDE_USART_ASPEP
+extern UART_HandleTypeDef huart2;
+#endif
 
 /* USER CODE END Includes */
 
@@ -67,7 +71,10 @@ void SysTick_Handler(void);
 void USART2_IRQHandler(void)
 {
   /* USER CODE BEGIN USART2_IRQHandler 0 */
-
+	HAL_UART_IRQHandler(&huart2);
+#ifdef OVERRIDE_USART_ASPEP
+	return;
+#endif
   /* USER CODE END USART2_IRQHandler 0 */
   uint32_t flags;
   uint32_t activeIdleFlag;

@@ -73,7 +73,8 @@ Application/User/main.o: \
  ../../Inc/parameters_conversion.h ../../Inc/mc_math.h \
  ../../Inc/parameters_conversion_f30x.h ../../Inc/mc_stm_types.h \
  ../../Inc/pmsm_motor_parameters.h ../../Inc/drive_parameters.h \
- ../../Inc/power_stage_parameters.h ../../Inc/mc_api.h
+ ../../Inc/power_stage_parameters.h ../../Inc/mc_api.h \
+ ../../Inc/dassert.h ../../Inc/main.h
 ../../Inc/main.h:
 ../../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:
 ../../Inc/stm32f3xx_hal_conf.h:
@@ -157,3 +158,5 @@ Application/User/main.o: \
 ../../Inc/drive_parameters.h:
 ../../Inc/power_stage_parameters.h:
 ../../Inc/mc_api.h:
+../../Inc/dassert.h:
+../../Inc/main.h:

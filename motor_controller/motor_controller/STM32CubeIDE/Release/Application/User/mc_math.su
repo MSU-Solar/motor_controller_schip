@@ -1,0 +1,6 @@
+C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/mc_math.c:101:20:MCM_Clarke	16	static
+C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/mc_math.c:342:24:MCM_Trig_Functions	8	static
+C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/mc_math.c:173:13:MCM_Park	32	static
+C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/mc_math.c:288:20:MCM_Rev_Park	32	static
+C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/mc_math.c:403:16:MCM_Sqrt	0	static
+C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/mc_math.c:450:17:MCM_floatToIntBit	8	static

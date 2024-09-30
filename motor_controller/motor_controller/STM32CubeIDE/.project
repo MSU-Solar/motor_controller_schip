@@ -41,6 +41,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/Src/aspep.c</locationURI>
 		</link>
 		<link>
+			<name>Application/User/dassert.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Src/dassert.c</locationURI>
+		</link>
+		<link>
 			<name>Application/User/main.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Src/main.c</locationURI>
