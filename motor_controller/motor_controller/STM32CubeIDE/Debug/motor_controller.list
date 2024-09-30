@@ -27,27 +27,27 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  0000a544  2**0
                   CONTENTS, READONLY
- 12 .debug_line   0003fb00  00000000  00000000  0000a574  2**0
+ 12 .debug_line   0003fb06  00000000  00000000  0000a574  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_line_str 000000d0  00000000  00000000  0004a074  2**0
+ 13 .debug_line_str 000000d0  00000000  00000000  0004a07a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_info   0003c24c  00000000  00000000  0004a144  2**0
+ 14 .debug_info   0003c24c  00000000  00000000  0004a14a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_abbrev 000081cb  00000000  00000000  00086390  2**0
+ 15 .debug_abbrev 000081cb  00000000  00000000  00086396  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_aranges 00001a88  00000000  00000000  0008e560  2**3
+ 16 .debug_aranges 00001a88  00000000  00000000  0008e568  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_str    000d514d  00000000  00000000  0008ffe8  2**0
+ 17 .debug_str    000d514d  00000000  00000000  0008fff0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_rnglists 000027e0  00000000  00000000  00165135  2**0
+ 18 .debug_rnglists 000027e0  00000000  00000000  0016513d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_loclists 00019000  00000000  00000000  00167915  2**0
+ 19 .debug_loclists 00019000  00000000  00000000  0016791d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_macro  0002850c  00000000  00000000  00180915  2**0
+ 20 .debug_macro  0002850c  00000000  00000000  0018091d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .comment      00000043  00000000  00000000  001a8e21  2**0
+ 21 .comment      00000043  00000000  00000000  001a8e29  2**0
                   CONTENTS, READONLY
- 22 .debug_frame  00004984  00000000  00000000  001a8e64  2**2
+ 22 .debug_frame  00004984  00000000  00000000  001a8e6c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1279,6 +1279,8 @@ void debug_printf(const char *format, ...) {
  80008ea:	b500      	push	{lr}
  80008ec:	b0a3      	sub	sp, #140	@ 0x8c
  80008ee:	ab24      	add	r3, sp, #144	@ 0x90
+	return;
+#endif
     char buffer[128];
     va_list args;
     va_start(args, format);

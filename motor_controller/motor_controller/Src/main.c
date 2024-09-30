@@ -22,6 +22,9 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "dassert.h"
+#ifndef ENABLE_CAN_COMMUNICATION
+
+#endif
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

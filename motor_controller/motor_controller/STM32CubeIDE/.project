@@ -36,6 +36,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/motor_controller.ioc</locationURI>
 		</link>
 		<link>
+			<name>Application/User/Profile</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>Application/User/aspep.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Src/aspep.c</locationURI>
@@ -344,6 +349,11 @@
 			<name>Middlewares/MotorControl/virtual_speed_sensor.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/MCSDK_v6.3.1-Full/MotorControl/MCSDK/MCLib/Any/Src/virtual_speed_sensor.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Profile/product_features.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Profile/product_features.h</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
