@@ -25,6 +25,7 @@ Middlewares/MotorControl/sto_pll_speed_pos_fdbk.o: \
  ../../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_cortex.h \
  ../../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_adc.h \
  ../../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_adc_ex.h \
+ ../../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_can.h \
  ../../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_flash.h \
  ../../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_flash_ex.h \
  ../../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_i2c.h \
@@ -75,6 +76,7 @@ Middlewares/MotorControl/sto_pll_speed_pos_fdbk.o: \
 ../../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_cortex.h:
 ../../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_adc.h:
 ../../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_adc_ex.h:
+../../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_can.h:
 ../../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_flash.h:
 ../../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_flash_ex.h:
 ../../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_i2c.h:
