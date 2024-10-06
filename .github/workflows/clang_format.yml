@@ -1,0 +1,28 @@
+name: Clang Format and Push
+
+on:
+  workflow_dispatch:
+
+jobs:
+  format-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install clang-format
+        run: sudo apt-get install -y clang-format
+
+      - name: Run clang-format
+        run: |
+          chmod +x ./clang_format.sh
+          ./clang_format.sh
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Apply clang-format changes- workflow-manual"
+          git push origin HEAD
