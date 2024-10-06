@@ -1,0 +1,25 @@
+name: Build STM32CubeIDE Project
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Build STM32CubeIDE project using GitHub Action
+      - name: Build STM32CubeIDE project
+        uses: xanderhendriks/action-build-stm32cubeide@v13.0
+        with:
+          project-path: 'motor_controller/motor_controller/STM32CubeIDE'  # Path to your STM32CubeIDE project file
+          project-target: 'motor_controller/Debug'  # Use 'motor_controller' to build all configurations or specify 'Debug' or 'Release'
