@@ -1,4 +1,5 @@
-# Motor Control Development
+# Motor Control Development 
+> [![Build STM32CubeIDE Project](https://github.com/MSU-Solar/motor_controller_schip/actions/workflows/main.yml/badge.svg)](https://github.com/MSU-Solar/motor_controller_schip/actions/workflows/main.yml)
 
 Welcome to the firmware development repository for the F302R8 STM32 MCU-based motor controller kit. This repository serves as a foundational setup for developing motor control applications, with the eventual goal of transitioning to the STM32 Motor Control SDK (MCSDK) to generate drivers for our custom applications.
 
