@@ -1,4 +1,0 @@
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/stm32_mc_common_it.c:67:6:USART2_IRQHandler	12
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/stm32_mc_common_it.c:145:6:HardFault_Handler	1
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/stm32_mc_common_it.c:164:6:SysTick_Handler	3
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/stm32_mc_common_it.c:210:6:EXTI15_10_IRQHandler	2
