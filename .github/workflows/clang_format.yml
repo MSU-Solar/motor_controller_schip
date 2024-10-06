@@ -16,13 +16,13 @@ jobs:
 
       - name: Run clang-format
         run: |
-          chmod +x ./clang_format.sh
-          ./clang_format.sh
+          chmod +x ./tools/clang_format.sh
+          ./tools/clang_format.sh
 
       - name: Commit and Push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Apply clang-format changes- workflow-manual"
+          git commit -m "Apply clang-format changes - workflow manual"
           git push origin HEAD
