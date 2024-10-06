@@ -14,10 +14,12 @@ jobs:
       - name: Install clang-format
         run: sudo apt-get install -y clang-format
 
-      - name: Run clang-format
+      - name: Run clang-format in Src directory
         run: |
-          chmod +x ./tools/clang_format.sh
-          ./tools/clang_format.sh
+          SRC_DIR="motor_controller/motor_controller/Src"
+          # Run clang-format on all .c, .cpp, .h, .hpp files in the specified directory
+          find $SRC_DIR -regex '.*\.\(c\|cpp\|h\|hpp\)' -exec clang-format -i {} \;
+          echo "Code formatted using clang-format in $SRC_DIR."
 
       - name: Commit and Push changes
         run: |
