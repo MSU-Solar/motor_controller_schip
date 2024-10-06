@@ -6,7 +6,7 @@ Welcome to the firmware development repository for the F302R8 STM32 MCU-based mo
 
 ### Prerequisites
 
-- **STM32CubeIDE** (tested with version 1.61)
+- **STM32CubeIDE** (tested with version 1.16.1)
   - Download from: [STM32CubeIDE Official Page](https://www.st.com/en/development-tools/stm32cubeide.html#get-software)
 - **STM32CubeMX** (optional for additional configuration)
   - Download from: [STM32CubeMX Official Page](https://www.st.com/content/st_com/en/stm32cubemx.html)
