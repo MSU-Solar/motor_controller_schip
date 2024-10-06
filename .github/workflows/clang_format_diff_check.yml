@@ -1,0 +1,43 @@
+name: Clang Format Diff Check
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  clang-format-diff:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install clang-format
+        run: sudo apt-get install -y clang-format
+
+      - name: Run clang-format diff in Src directory
+        run: |
+          SRC_DIR="motor_controller/motor_controller/Src"
+          FILES=$(find $SRC_DIR -regex '.*\.\(c\|cpp\|h\|hpp\)')
+
+          # Run clang-format in diff mode to check if any changes are required
+          CHANGES_NEEDED=0
+          for file in $FILES; do
+            clang-format $file > formatted_file
+            if ! cmp -s $file formatted_file; then
+              echo "Formatting issue found in $file"
+              CHANGES_NEEDED=1
+            fi
+          done
+
+          # Exit with status 1 if changes are needed, else pass
+          if [ $CHANGES_NEEDED -eq 1 ]; then
+            echo "Code is not properly formatted. Please run clang-format."
+            exit 1
+          else
+            echo "All code is formatted correctly."
+          fi
