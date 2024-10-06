@@ -6,29 +6,29 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="Filter"/>
 		<list key="findhistory">
+			<item value="filter"/>
+			<item value="init"/>
+			<item value="stm32f3xx_hal_conf.h"/>
+			<item value="38400"/>
+			<item value="while"/>
+			<item value="baud"/>
+			<item value="busy"/>
+			<item value="huart2"/>
+			<item value="USART2"/>
 			<item value="HAL_UART_IRQHandler"/>
+			<item value="IRQ"/>
+			<item value="transm"/>
+			<item value="trans"/>
 			<item value="max_de"/>
 			<item value="max"/>
-			<item value="Timeout"/>
-			<item value="int main"/>
-			<item value="main"/>
-			<item value="1152"/>
-			<item value="transmit"/>
-			<item value="whi"/>
-			<item value="HAL_NVIC_SetPriority"/>
-			<item value="Transmit"/>
-			<item value="tran"/>
-			<item value="tr"/>
-			<item value="print"/>
-			<item value="while"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="9"/>
+		<item key="DIALOG_X_ORIGIN" value="233"/>
 		<item key="DIALOG_Y_ORIGIN" value="558"/>
 		<item key="DIALOG_WIDTH" value="595"/>
 		<item key="DIALOG_HEIGHT" value="471"/>

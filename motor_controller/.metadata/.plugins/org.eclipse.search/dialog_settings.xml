@@ -25,17 +25,17 @@
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="TextSearchPage">
-		<item key="CASE_SENSITIVE" value="false"/>
+		<item key="CASE_SENSITIVE" value="true"/>
 		<item key="REG_EX_SEARCH" value="false"/>
 		<item key="WHOLE_WORD" value="false"/>
 		<item key="SEARCH_DERIVED" value="false"/>
 		<item key="SEARCH_IN_BINARIES" value="false"/>
-		<item key="HISTORY_SIZE" value="9"/>
+		<item key="HISTORY_SIZE" value="12"/>
 		<section name="HISTORY0">
-			<item key="ignoreCase" value="true"/>
+			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="USART2_IRQHandler"/>
+			<item key="textPattern" value="stm32f3xx_hal_conf.h"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -44,15 +44,15 @@
 			</list>
 		</section>
 		<section name="EXTENSIONS">
-			<item key="0" value=""/>
-			<item key="1" value="*.h"/>
-			<item key="2" value="*"/>
+			<item key="0" value="*"/>
+			<item key="1" value=""/>
+			<item key="2" value="*.h"/>
 		</section>
 		<section name="HISTORY1">
-			<item key="ignoreCase" value="true"/>
+			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="UART_IRQHandler"/>
+			<item key="textPattern" value="HAL_MODULE_ENABLED"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -61,10 +61,10 @@
 			</list>
 		</section>
 		<section name="HISTORY2">
-			<item key="ignoreCase" value="true"/>
+			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="HAL_Max_Delay"/>
+			<item key="textPattern" value="HAL_CAN_MODULE_ENABLED"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -73,10 +73,10 @@
 			</list>
 		</section>
 		<section name="HISTORY3">
-			<item key="ignoreCase" value="true"/>
+			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="HardFault_Handler"/>
+			<item key="textPattern" value="HAL_CAN_Init"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -85,10 +85,10 @@
 			</list>
 		</section>
 		<section name="HISTORY4">
-			<item key="ignoreCase" value="true"/>
+			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="HAL_UART_IRQHandler"/>
+			<item key="textPattern" value="CAN"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -100,7 +100,7 @@
 			<item key="ignoreCase" value="true"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="HAL_UART_Transmit"/>
+			<item key="textPattern" value="CAN_HandleTypeDef"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -112,7 +112,7 @@
 			<item key="ignoreCase" value="true"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="print"/>
+			<item key="textPattern" value="USART2_IRQHandler"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -124,7 +124,7 @@
 			<item key="ignoreCase" value="true"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="115200"/>
+			<item key="textPattern" value="HAL_UART_IRQHandler"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -136,7 +136,43 @@
 			<item key="ignoreCase" value="true"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="MX_MotorControl_Init"/>
+			<item key="textPattern" value="UART_IRQHandler"/>
+			<item key="scope" value="0"/>
+			<list key="fileNamePatterns">
+				<item value="*"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY9">
+			<item key="ignoreCase" value="true"/>
+			<item key="isRegExSearch" value="false"/>
+			<item key="isWholeWord" value="false"/>
+			<item key="textPattern" value="HAL_Max_Delay"/>
+			<item key="scope" value="0"/>
+			<list key="fileNamePatterns">
+				<item value="*"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY10">
+			<item key="ignoreCase" value="true"/>
+			<item key="isRegExSearch" value="false"/>
+			<item key="isWholeWord" value="false"/>
+			<item key="textPattern" value="HardFault_Handler"/>
+			<item key="scope" value="0"/>
+			<list key="fileNamePatterns">
+				<item value="*"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY11">
+			<item key="ignoreCase" value="true"/>
+			<item key="isRegExSearch" value="false"/>
+			<item key="isWholeWord" value="false"/>
+			<item key="textPattern" value="HAL_UART_Transmit"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
