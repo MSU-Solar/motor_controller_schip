@@ -63,11 +63,11 @@ For more detailed guidance, refer to [GitHub's SSH setup documentation](https://
    - Set `<local_directory>/motor_controller_schip/motor_controller/` as your workspace when prompted by STM32CubeIDE.
 
 3. **Open the Project**
-   - In STM32CubeIDE, navigate to:
+   - Navigate to:
      ```
      motor_controller/motor_controller/STM32CubeIDE/.cproject
      ```
-   - Opening this file will set up the project within your environment.
+   - Opening this file will set up the project within your workspace.
 
 4. **Build the Project**
    - Press **Ctrl+B** to build the project.
