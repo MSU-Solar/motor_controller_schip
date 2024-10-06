@@ -1,35 +1,35 @@
 
 /**
-  ******************************************************************************
-  * @file    stm32_mc_common_it.c
-  * @author  Motor Control SDK Team, ST Microelectronics
-  * @brief   Main Interrupt Service Routines.
-  *          This file provides exceptions handler and peripherals interrupt
-  *          service routine related to Motor Control for the STM32 Family
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2024 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under Ultimate Liberty license
-  * SLA0044, the "License"; You may not use this file except in compliance with
-  * the License. You may obtain a copy of the License at:
-  *                             www.st.com/SLA0044
-  *
-  ******************************************************************************
-  * @ingroup STM32F30x_IRQ_Handlers
-  */
+ ******************************************************************************
+ * @file    stm32_mc_common_it.c
+ * @author  Motor Control SDK Team, ST Microelectronics
+ * @brief   Main Interrupt Service Routines.
+ *          This file provides exceptions handler and peripherals interrupt
+ *          service routine related to Motor Control for the STM32 Family
+ ******************************************************************************
+ * @attention
+ *
+ * <h2><center>&copy; Copyright (c) 2024 STMicroelectronics.
+ * All rights reserved.</center></h2>
+ *
+ * This software component is licensed by ST under Ultimate Liberty license
+ * SLA0044, the "License"; You may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at:
+ *                             www.st.com/SLA0044
+ *
+ ******************************************************************************
+ * @ingroup STM32F30x_IRQ_Handlers
+ */
 
 /* Includes ------------------------------------------------------------------*/
 #include "mc_config.h"
-#include "mc_type.h"
 #include "mc_tasks.h"
-#include "parameters_conversion.h"
-#include "motorcontrol.h"
-#include "stm32f3xx_ll_exti.h"
-#include "stm32f3xx_it.h"
+#include "mc_type.h"
 #include "mcp_config.h"
+#include "motorcontrol.h"
+#include "parameters_conversion.h"
+#include "stm32f3xx_it.h"
+#include "stm32f3xx_ll_exti.h"
 
 /* USER CODE BEGIN Includes */
 #define OVERRIDE_USART_ASPEP
@@ -40,16 +40,16 @@ extern UART_HandleTypeDef huart2;
 /* USER CODE END Includes */
 
 /** @addtogroup MCSDK
-  * @{
-  */
+ * @{
+ */
 /** @addtogroup STM32F30x_IRQ_Handlers STM32F30x IRQ Handlers
-  * @{
-  */
+ * @{
+ */
 
 /* USER CODE BEGIN PRIVATE */
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
-#define SYSTICK_DIVIDER (SYS_TICK_FREQUENCY/1000U)
+#define SYSTICK_DIVIDER (SYS_TICK_FREQUENCY / 1000U)
 
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
@@ -65,27 +65,23 @@ void SysTick_Handler(void);
 
 /* This section is present only when MCP over UART_A is used */
 /**
-  * @brief  This function handles USART interrupt request.
-  * @param  None
-  */
-void USART2_IRQHandler(void)
-{
+ * @brief  This function handles USART interrupt request.
+ * @param  None
+ */
+void USART2_IRQHandler(void) {
   /* USER CODE BEGIN USART2_IRQHandler 0 */
-	HAL_UART_IRQHandler(&huart2);
+  HAL_UART_IRQHandler(&huart2);
 #ifdef OVERRIDE_USART_ASPEP
-	return;
+  return;
 #endif
   /* USER CODE END USART2_IRQHandler 0 */
   uint32_t flags;
   uint32_t activeIdleFlag;
   uint32_t isEnabledIdleFlag;
 
-  if (0U == LL_USART_IsActiveFlag_TC(USARTA))
-  {
+  if (0U == LL_USART_IsActiveFlag_TC(USARTA)) {
     /* Nothing to do */
-  }
-  else
-  {
+  } else {
     /* Disable the DMA channel to prepare the next chunck of data*/
     LL_DMA_DisableChannel(DMA_TX_A, DMACH_TX_A);
     LL_USART_ClearFlag_TC(USARTA);
@@ -104,15 +100,13 @@ void USART2_IRQHandler(void)
   errorMask = LL_USART_IsEnabledIT_ERROR(USARTA);
 
   flags = ((oreFlag | feFlag | neFlag) & errorMask);
-  if (0U == flags)
-  {
+  if (0U == flags) {
     /* Nothing to do */
-  }
-  else
-  { /* Stopping the debugger will generate an OverRun error*/
+  } else { /* Stopping the debugger will generate an OverRun error*/
     WRITE_REG(USARTA->ICR, USART_ICR_FECF | USART_ICR_ORECF | USART_ICR_NCF);
 
-    /* We disable ERROR interrupt to avoid to trig one Overrun IT per additional byte recevied*/
+    /* We disable ERROR interrupt to avoid to trig one Overrun IT per additional
+     * byte recevied*/
     LL_USART_DisableIT_ERROR(USARTA);
     LL_USART_EnableIT_IDLE(USARTA);
   }
@@ -121,17 +115,16 @@ void USART2_IRQHandler(void)
   isEnabledIdleFlag = LL_USART_IsEnabledIT_IDLE(USARTA);
 
   flags = activeIdleFlag & isEnabledIdleFlag;
-  if (0U == flags)
-  {
+  if (0U == flags) {
     /* Nothing to do */
-  }
-  else
-  { /* Stopping the debugger will generate an OverRun error*/
+  } else { /* Stopping the debugger will generate an OverRun error*/
     LL_USART_DisableIT_IDLE(USARTA);
-    /* Once the complete unexpected data are received, we enable back the error IT*/
+    /* Once the complete unexpected data are received, we enable back the error
+     * IT*/
     LL_USART_EnableIT_ERROR(USARTA);
     /* To be sure we fetch the potential pending data*/
-    /* We disable the DMA request, Read the dummy data, endable back the DMA request */
+    /* We disable the DMA request, Read the dummy data, endable back the DMA
+     * request */
     LL_USART_DisableDMAReq_RX(USARTA);
     (void)LL_USART_ReceiveData8(USARTA);
     LL_USART_EnableDMAReq_RX(USARTA);
@@ -146,64 +139,55 @@ void USART2_IRQHandler(void)
 }
 
 /**
-  * @brief  This function handles Hard Fault exception.
-  * @param  None
-  */
-void HardFault_Handler(void)
-{
- /* USER CODE BEGIN HardFault_IRQn 0 */
+ * @brief  This function handles Hard Fault exception.
+ * @param  None
+ */
+void HardFault_Handler(void) {
+  /* USER CODE BEGIN HardFault_IRQn 0 */
 
- /* USER CODE END HardFault_IRQn 0 */
+  /* USER CODE END HardFault_IRQn 0 */
 
   TSK_HardwareFaultTask();
 
   /* Go to infinite loop when Hard Fault exception occurs */
-  while (true)
-  {
+  while (true) {
     /* Nothing to do */
   }
 
- /* USER CODE BEGIN HardFault_IRQn 1 */
+  /* USER CODE BEGIN HardFault_IRQn 1 */
 
- /* USER CODE END HardFault_IRQn 1 */
+  /* USER CODE END HardFault_IRQn 1 */
 }
 
-void SysTick_Handler(void)
-{
+void SysTick_Handler(void) {
 #ifdef MC_HAL_IS_USED
-static uint8_t SystickDividerCounter = SYSTICK_DIVIDER;
+  static uint8_t SystickDividerCounter = SYSTICK_DIVIDER;
   /* USER CODE BEGIN SysTick_IRQn 0 */
 
   /* USER CODE END SysTick_IRQn 0 */
-  if (SystickDividerCounter == SYSTICK_DIVIDER)
-  {
+  if (SystickDividerCounter == SYSTICK_DIVIDER) {
     HAL_IncTick();
     HAL_SYSTICK_IRQHandler();
     SystickDividerCounter = 0;
-  }
-  else
-  {
+  } else {
     /* Nothing to do */
   }
 
-  SystickDividerCounter ++;
+  SystickDividerCounter++;
 #endif /* MC_HAL_IS_USED */
   /* Buffer is ready by the HW layer to be processed */
   /* NO DMA interrupt */
-  if (LL_DMA_IsActiveFlag_TC(DMA_RX_A, DMACH_RX_A))
-  {
+  if (LL_DMA_IsActiveFlag_TC(DMA_RX_A, DMACH_RX_A)) {
     LL_DMA_ClearFlag_TC(DMA_RX_A, DMACH_RX_A);
     ASPEP_HWDataReceivedIT(&aspepOverUartA);
-  }
-  else
-  {
+  } else {
     /* Nothing to do */
   }
   /* USER CODE BEGIN SysTick_IRQn 1 */
 
   /* USER CODE END SysTick_IRQn 1 */
 
-    MC_RunMotorControlTasks();
+  MC_RunMotorControlTasks();
 
   /* USER CODE BEGIN SysTick_IRQn 2 */
 
@@ -214,19 +198,14 @@ static uint8_t SystickDividerCounter = SYSTICK_DIVIDER;
   * @brief  This function handles Button IRQ on PIN PC13.
 
   */
-void EXTI15_10_IRQHandler(void)
-{
+void EXTI15_10_IRQHandler(void) {
   /* USER CODE BEGIN START_STOP_BTN */
-  if (LL_EXTI_ReadFlag_0_31(LL_EXTI_LINE_13))
-  {
+  if (LL_EXTI_ReadFlag_0_31(LL_EXTI_LINE_13)) {
     LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_13);
     (void)UI_HandleStartStopButton_cb();
-  }
-  else
-  {
+  } else {
     /* Nothing to do */
   }
-
 }
 
 /* USER CODE BEGIN 1 */
@@ -234,12 +213,11 @@ void EXTI15_10_IRQHandler(void)
 /* USER CODE END 1 */
 
 /**
-  * @}
-  */
+ * @}
+ */
 
 /**
-  * @}
-  */
+ * @}
+ */
 
 /******************* (C) COPYRIGHT 2024 STMicroelectronics *****END OF FILE****/
-
