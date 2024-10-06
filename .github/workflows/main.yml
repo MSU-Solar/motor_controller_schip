@@ -17,9 +17,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Build STM32CubeIDE project using GitHub Action
-      - name: Build STM32CubeIDE project
+      # Build all configurations (Debug and Release) using GitHub Action
+      - name: Build STM32CubeIDE project - All Configurations
         uses: xanderhendriks/action-build-stm32cubeide@v13.0
         with:
           project-path: 'motor_controller/motor_controller/STM32CubeIDE'  # Path to your STM32CubeIDE project file
-          project-target: 'motor_controller/Debug'  # Use 'motor_controller' to build all configurations or specify 'Debug' or 'Release'
+          project-target: 'motor_controller/motor_controller'  # Builds all available configurations (Debug and Release)
