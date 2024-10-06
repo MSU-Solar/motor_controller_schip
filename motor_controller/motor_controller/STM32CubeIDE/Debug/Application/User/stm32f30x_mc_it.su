@@ -1,3 +1,0 @@
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/stm32f30x_mc_it.c:69:6:ADC1_IRQHandler	0	static
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/stm32f30x_mc_it.c:94:6:TIM1_UP_TIM16_IRQHandler	0	static
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/stm32f30x_mc_it.c:112:6:TIM1_BRK_TIM15_IRQHandler	8	static

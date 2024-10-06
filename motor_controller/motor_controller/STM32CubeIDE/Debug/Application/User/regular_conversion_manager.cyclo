@@ -1,7 +1,0 @@
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/regular_conversion_manager.c:179:6:RCM_RegisterRegConv	32
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/regular_conversion_manager.c:144:6:RCM_RegisterRegConv_WithCB	2
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/regular_conversion_manager.c:279:10:RCM_ExecRegularConv	3
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/regular_conversion_manager.c:312:6:RCM_RequestUserConv	2
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/regular_conversion_manager.c:337:10:RCM_GetUserConv	2
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/regular_conversion_manager.c:359:6:RCM_ExecUserConv	4
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/regular_conversion_manager.c:398:21:RCM_GetUserConvState	1

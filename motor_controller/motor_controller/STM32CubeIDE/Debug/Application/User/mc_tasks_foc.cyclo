@@ -1,7 +1,0 @@
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/mc_tasks_foc.c:479:13:FOC_Clear	1
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/mc_tasks_foc.c:81:13:FOC_Init	1
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/mc_tasks_foc.c:155:6:TSK_MF_StopProcessing	1
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/mc_tasks_foc.c:515:13:FOC_InitAdditionalMethods	1
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/mc_tasks_foc.c:538:13:FOC_CalcCurrRef	2
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/mc_tasks_foc.c:173:13:TSK_MediumFrequencyTaskM1	31
-C:/Users/vnaik/OneDrive - Michigan State University/Documents/Solar Car/Git projects/motor_controller_schip/motor_controller/motor_controller/Src/mc_tasks_foc.c:593:16:FOC_HighFrequencyTask	7
