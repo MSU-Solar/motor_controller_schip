@@ -1,25 +1,25 @@
 /* USER CODE BEGIN Header */
 /**
- ******************************************************************************
- * @file    stm32f3xx_it.c
- * @brief   Interrupt Service Routines.
- ******************************************************************************
- * @attention
- *
- * Copyright (c) 2024 STMicroelectronics.
- * All rights reserved.
- *
- * This software is licensed under terms that can be found in the LICENSE file
- * in the root directory of this software component.
- * If no LICENSE file comes with this software, it is provided AS-IS.
- *
- ******************************************************************************
- */
+  ******************************************************************************
+  * @file    stm32f3xx_it.c
+  * @brief   Interrupt Service Routines.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2024 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f3xx_it.h"
 #include "main.h"
+#include "stm32f3xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 /* USER CODE END Includes */
@@ -72,9 +72,10 @@ extern UART_HandleTypeDef huart2;
 /******************************************************************************/
 
 /**
- * @brief This function handles USART2 global interrupt.
- */
-void USART2_IRQHandler(void) {
+  * @brief This function handles USART2 global interrupt.
+  */
+void USART2_IRQHandler(void)
+{
   /* USER CODE BEGIN USART2_IRQn 0 */
 
   /* USER CODE END USART2_IRQn 0 */
