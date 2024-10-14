@@ -1,0 +1,33 @@
+name: Clang Format and Push
+
+on:
+  workflow_dispatch:
+
+jobs:
+  format-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install clang-format
+        run: sudo apt-get install -y clang-format
+
+      - name: Run clang-format in Src directory
+        run: |
+          SRC_DIR="motor_controller/motor_controller/Src/Src-User"
+          INC_DIR="motor_controller/motor_controller/Inc/Inc-User"
+          # Run clang-format on all .c, .cpp, .h, .hpp files in the specified directory
+          find $SRC_DIR -regex '.*\.\(c\|cpp\|h\|hpp\)' -exec clang-format -i {} \;
+          echo "Code formatted using clang-format in $SRC_DIR."
+          find $INC_DIR -regex '.*\.\(c\|cpp\|h\|hpp\)' -exec clang-format -i {} \;
+          echo "Code formatted using clang-format in $SRC_DIR."
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Apply clang-format changes - workflow manual"
+          git push origin HEAD

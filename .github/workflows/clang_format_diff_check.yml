@@ -1,0 +1,57 @@
+name: Clang Format Diff Check
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  clang-format-diff:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install clang-format
+        run: sudo apt-get install -y clang-format
+
+      - name: Run clang-format diff in Src-User and Inc-User directories
+        run: |
+          SRC_DIR="motor_controller/motor_controller/Src/Src-User"
+          INC_DIR="motor_controller/motor_controller/Inc/Inc-User"
+
+          # Combine both source and include directories for clang-format checking
+          DIRECTORIES=("$SRC_DIR" "$INC_DIR")
+
+          # Function to check formatting
+          check_formatting() {
+            FILES=$(find $1 -regex '.*\.\(c\|cpp\|h\|hpp\)')
+            CHANGES_NEEDED=0
+
+            for file in $FILES; do
+              clang-format $file > formatted_file
+              if ! cmp -s $file formatted_file; then
+                echo "Formatting issue found in $file"
+                CHANGES_NEEDED=1
+              fi
+            done
+
+            # Return status
+            if [ $CHANGES_NEEDED -eq 1 ]; then
+              return 1
+            fi
+          }
+
+          # Check formatting in both directories
+          for dir in "${DIRECTORIES[@]}"; do
+            echo "Checking formatting in $dir"
+            if ! check_formatting "$dir"; then
+              echo "Code is not properly formatted in $dir. Please run clang-format."
+              exit 1
+            else
+              echo "All code is formatted correctly in $dir."
+            fi
+          done
+
+          echo "All code in both Src-User and Inc-User directories is formatted correctly."
