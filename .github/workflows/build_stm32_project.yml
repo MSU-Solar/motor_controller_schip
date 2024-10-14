@@ -3,7 +3,8 @@ name: Build STM32CubeIDE Project
 on:
   push:
     branches:
-      - '**'  
+      - '**'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,9 +14,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Check if project directory exists
+      - name: Ensure STM32CubeIDE project path
+        run: |
+          if [ ! -f "motor_controller/motor_controller/STM32CubeIDE/.project" ]; then
+            echo "Project file not found. Please ensure the path is correct."
+            exit 1
+          else
+            echo "Project file found."
+          fi
+
       # Build all configurations (Debug and Release) using GitHub Action
       - name: Build STM32CubeIDE project - All Configurations
         uses: xanderhendriks/action-build-stm32cubeide@v13.0
         with:
-          project-path: 'motor_controller/motor_controller/STM32CubeIDE'  # Path to your STM32CubeIDE project file
-          project-target: 'motor_controller/motor_controller'  # Builds all available configurations (Debug and Release)
+          project-path: 'motor_controller/motor_controller/STM32CubeIDE'  # Path to the STM32CubeIDE project directory
+          project-target: 'motor_controller'  # Set the project target to motor_controller
