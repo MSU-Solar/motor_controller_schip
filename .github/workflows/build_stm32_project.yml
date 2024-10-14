@@ -29,4 +29,4 @@ jobs:
         uses: xanderhendriks/action-build-stm32cubeide@v13.0
         with:
           project-path: 'motor_controller/motor_controller/STM32CubeIDE'  # Path to the STM32CubeIDE project directory
-          project-target: ''  # Builds all available configurations
+          project-target: 'motor_controller'  # Set the project target to motor_controller
