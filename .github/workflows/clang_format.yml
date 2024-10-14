@@ -16,9 +16,12 @@ jobs:
 
       - name: Run clang-format in Src directory
         run: |
-          SRC_DIR="motor_controller/motor_controller/Src"
+          SRC_DIR="motor_controller/motor_controller/Src/Src-User"
+          INC_DIR="motor_controller/motor_controller/Inc/Inc-User"
           # Run clang-format on all .c, .cpp, .h, .hpp files in the specified directory
           find $SRC_DIR -regex '.*\.\(c\|cpp\|h\|hpp\)' -exec clang-format -i {} \;
+          echo "Code formatted using clang-format in $SRC_DIR."
+          find $INC_DIR -regex '.*\.\(c\|cpp\|h\|hpp\)' -exec clang-format -i {} \;
           echo "Code formatted using clang-format in $SRC_DIR."
 
       - name: Commit and Push changes
