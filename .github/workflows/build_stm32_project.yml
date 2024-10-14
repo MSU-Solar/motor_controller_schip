@@ -14,20 +14,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Check if configuration exists, otherwise set a default
-      - name: Ensure STM32CubeIDE configuration
+      # Check if project directory exists
+      - name: Ensure STM32CubeIDE project path
         run: |
-          if [ ! -d "motor_controller/motor_controller/STM32CubeIDE/.settings" ]; then
-            echo "Configuration not found, creating default configuration..."
-            mkdir -p motor_controller/motor_controller/STM32CubeIDE/.settings
-            # Add any default configuration files as needed
+          if [ ! -f "motor_controller/motor_controller/STM32CubeIDE/.project" ]; then
+            echo "Project file not found. Please ensure the path is correct."
+            exit 1
           else
-            echo "Configuration exists."
+            echo "Project file found."
           fi
 
       # Build all configurations (Debug and Release) using GitHub Action
       - name: Build STM32CubeIDE project - All Configurations
         uses: xanderhendriks/action-build-stm32cubeide@v13.0
         with:
-          project-path: 'motor_controller/motor_controller/STM32CubeIDE'  # Path to your STM32CubeIDE project file
+          project-path: 'motor_controller/motor_controller/STM32CubeIDE'  # Path to the STM32CubeIDE project directory
           project-target: ''  # Builds all available configurations
