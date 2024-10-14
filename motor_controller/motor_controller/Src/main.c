@@ -343,7 +343,7 @@ static void MX_CAN_Init(void)
   * @retval None
   */
 static void MX_TIM1_Init(void)
-{
+
 
   /* USER CODE BEGIN TIM1_Init 0 */
 
