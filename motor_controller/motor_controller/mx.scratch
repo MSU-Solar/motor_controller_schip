@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ScratchFile FileVersion="3.0">
+  <FileVersion>3.0</FileVersion>
+  <Workspace>
+    <WorkspaceType>Single-project</WorkspaceType>
+    <WorkspacePath>C:\Users\vnaik\OneDrive - Michigan State University\Documents\Solar Car\motor_controller_schip\motor_controller\motor_controller\</WorkspacePath>
+    <underRoot>false</underRoot>
+    <TrustZone>0</TrustZone>
+    <HAL_Driver>C:\Users\vnaik\STM32Cube\Repository\STM32Cube_FW_F3_V1.11.5</HAL_Driver>
+    <CMSIS>Drivers/CMSIS</CMSIS>
+    <Toolchain>STM32CubeIDE</Toolchain>
+    <IocFile>motor_controller.ioc</IocFile>
+    <Project>
+              
+      <ProjectName>motor_controller</ProjectName>
+           
+      <ProjectNature>C</ProjectNature>
+       
+      <Secure/>
+            
+      <filestoremove>
+                
+        <file>
+                      
+          <name>motorcontrol.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>..\Src\custom.c</name>
+                  
+        </file>
+        <file>
+                      
+          <name>drive_parameters.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>mc_type.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>mc_tasks.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>pwm_common.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>mc_api.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>mc_config.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>mc_config_common.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>mcp_config.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>mc_stm_types.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>pwm_curr_fdbk.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>regular_conversion_manager.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>mc_math.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>mc_interface.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>parameters_conversion.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>parameters_conversion_f30x.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>pmsm_motor_parameters.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>power_stage_parameters.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>mc_parameters.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>mc_perf.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>register_interface.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>mc_configuration_registers.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>aspep.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>mc_app_hooks.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>stm32f3xx_it.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>stm32f3xx_hal_conf.h</name>
+                  
+        </file>
+        <file>
+                      
+          <name>main.h</name>
+                  
+        </file>
+                           
+      </filestoremove>
+          
+      <configs>
+        <config>
+              
+          <name>motor_controller</name>
+          	 
+          <mainSourceRepo>Src</mainSourceRepo>
+             
+          <sourceStructure>Basic</sourceStructure>
+           
+          <device>STM32F302R8Tx</device>
+          		     
+          <cpucore>Arm Cortex-M4</cpucore>
+                  
+          <fpu>SP</fpu>
+                
+          <memories>
+                       
+            <memory access="xrw" name="RAM" size="16384" start="0x20000000"/>
+                    
+            <memory access="rx" name="FLASH" size="65536" start="0x8000000"/>
+                
+          </memories>
+              
+          <startup>C:\Users\vnaik\STM32Cube\Repository\STM32Cube_FW_F3_V1.11.5\Drivers\CMSIS\Device\ST\STM32F3xx\Source\Templates\gcc\startup_stm32f302x8.s</startup>
+                
+          <LinkSettings>
+            	
+            <LinkAdditionalLibs>	</LinkAdditionalLibs>
+          </LinkSettings>
+              
+          <heapSize>0x200</heapSize>
+              
+          <stackSize>0x400</stackSize>
+                  
+          <cpuclock>72</cpuclock>
+                  
+          <board>custom</board>
+              
+          <debugprobe>swd</debugprobe>
+              
+          <optimization>5</optimization>
+              
+          <ForceDebugOptimization>true</ForceDebugOptimization>
+              
+          <Aincludes>
+                    
+            <include/>
+                    
+          </Aincludes>
+              
+          <Adefines>        </Adefines>
+                
+          <Cdefines>
+                    
+            <define>ARM_MATH_CM4</define>
+                    
+            <define>USE_HAL_DRIVER</define>
+                    
+            <define>STM32F302x8</define>
+                    
+          </Cdefines>
+              
+          <Ldefines>        </Ldefines>
+                  
+          <Cincludes>
+            		        
+            <include>Inc</include>
+                    
+            <include>Drivers\STM32F3xx_HAL_Driver\Inc</include>
+                    
+            <include>Drivers\STM32F3xx_HAL_Driver\Inc\Legacy</include>
+                    
+            <include>..\MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\Any\Inc</include>
+                    
+            <include>..\MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\F3xx\Inc</include>
+                    
+            <include>Drivers\CMSIS\Device\ST\STM32F3xx\Include</include>
+                    
+            <include>Drivers\CMSIS\Include</include>
+                    
+            <include>Drivers\CMSIS\DSP\Include</include>
+                    
+          </Cincludes>
+              
+          <definestoremove>
+                    
+            <Adefines>            </Adefines>
+                    
+            <Cdefines>
+                                  
+              <define>USE_FULL_LL_DRIVER</define>
+                                  
+              <define>USE_FULL_ASSERT=1U</define>
+                          
+            </Cdefines>
+                     
+            <Ldefines>            </Ldefines>
+                     
+          </definestoremove>
+              
+          <inctoremove>
+                    
+            <Aincludes>
+                          
+              <include/>
+                          
+            </Aincludes>
+                    
+            <Cincludes>            </Cincludes>
+                    
+          </inctoremove>
+                 
+        </config>
+                
+      </configs>
+       
+      <copyAsReference>false</copyAsReference>
+       
+      <Groups>
+            
+        <group>
+                  
+          <name>Middlewares</name>
+           		        
+          <group>
+                        
+            <name>MotorControl</name>
+                        
+            <file>
+                              
+              <name>MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\Any\Src\bus_voltage_sensor.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\Any\Src\circle_limitation.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\Any\Src\digital_output.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\Any\Src\ntc_temperature_sensor.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\Any\Src\open_loop.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\Any\Src\pid_regulator.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\Any\Src\pqd_motor_power_measurement.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\Any\Src\r_divider_bus_voltage_sensor.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\Any\Src\ramp_ext_mngr.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\Any\Src\revup_ctrl.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\Any\Src\speed_pos_fdbk.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\Any\Src\speed_torq_ctrl.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\Any\Src\sto_pll_speed_pos_fdbk.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\Any\Src\virtual_speed_sensor.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\F3xx\Src\r3_1_f30x_pwm_curr_fdbk.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>MCSDK_v6.3.1-Full\MotorControl\MCSDK\MCLib\Any\Src\mcpa.c</name>
+                              
+            </file>
+                        
+          </group>
+                  
+        </group>
+             
+        <group>
+                  
+          <name>Drivers</name>
+                                       
+          <group>
+                        
+            <name>STM32F3xx_HAL_Driver</name>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_adc.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_adc_ex.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_rcc.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_rcc_ex.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_gpio.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_dma.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_cortex.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_pwr.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_pwr_ex.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_flash.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_flash_ex.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_i2c.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_i2c_ex.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_exti.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_can.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_tim.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_tim_ex.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_uart.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>Drivers\STM32F3xx_HAL_Driver\Src\stm32f3xx_hal_uart_ex.c</name>
+                              
+            </file>
+                        
+          </group>
+                  
+          <group>
+                        
+            <name>CMSIS</name>
+                            
+            <file>
+                                          
+              <name>Src/system_stm32f3xx.c</name>
+                                          
+            </file>
+                                    
+          </group>
+                  
+        </group>
+               
+        <group>
+                  
+          <name>Application</name>
+                  
+          <group>
+                        
+            <name>User</name>
+                                  
+            <file>
+                                  
+              <name>Src\main.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\motorcontrol.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\pwm_common.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\mc_api.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\mc_config.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\mc_config_common.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\mcp_config.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\mc_tasks.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\mc_tasks_foc.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\pwm_curr_fdbk.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\regular_conversion_manager.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\mc_math.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\mc_interface.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\stm32_mc_common_it.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\stm32f30x_mc_it.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\mc_parameters.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\register_interface.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\mcp.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\mc_perf.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\usart_aspep_driver.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\mc_configuration_registers.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\aspep.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\mc_app_hooks.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\stm32f3xx_it.c</name>
+                                  
+            </file>
+                            
+            <file>
+                                  
+              <name>Src\stm32f3xx_hal_msp.c</name>
+                                  
+            </file>
+                        
+          </group>
+                   
+        </group>
+                
+      </Groups>
+    </Project>
+  </Workspace>
+</ScratchFile>
